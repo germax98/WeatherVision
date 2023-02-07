@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+$colors: (
+  primary-d: #000000,
+  primary-l: #EFF2F3,
+  l-dark: #949FAD,
+  p-right:#a6b3c7,
+  link: #7E98D2,
+  
+);
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+  }
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+   
+    
+    .Left{
+        height: 100vh;
+        background-color: color(primary-l);;
+        
+        .Logo{
+            
+            height: 18vh;
+            
+            img{
+                height: 18vh;
+                padding-bottom: 2vh;
+                
+            }
+            h3{
+                padding-left: 1vw;
+                text-transform: uppercase;
+                font-weight: 200;
+                color: color(link);
+                text-decoration: underline overline;
+                text-decoration-color: color(link);
+                text-underline-offset: 4px;
+                text-decoration-thickness: 1px;
+            }
+            
+        }
+        .Tags{
+            
+            
+            padding-left: 5vw;
+            .row{
+                height: 20vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around; 
+            }
+            
+            
+        }
+        .Home{
+            
+            padding-left: 5vw;
+            .row{
+                height: 8vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around; 
+            }
+            margin-top: 40vh;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: color(primary-d);
+        
+    }
+    img{
+        padding-right: 1vw;
+        height: 3vh;
+    }
+    #active_link{
+            background-color: white;
+            height: 5vh;
+            display: flex;
+            align-items: center;
+            
+            border-radius: 25px;
+            padding-left: 10%;
+            color: color(link);
+            font-size: large;   
+    }
+    .Center{
+        
+        
+        .Search{
+            
+            height: 18vh;
+            border-bottom: 2px solid rgb(192, 187, 187);
+            display: grid;
+            place-items: center;
+                
+            #Submit{
+                min-width: 6vw;
+                min-height: 6vh;
+                background-color: transparent;
+                border: 2px solid rgba(79, 78, 78, 0.366);
+                border-radius: 10px;
+            }
+            #myText{
+                width: 65%;
+                height: 6vh;
+                background-color: transparent;
+                border: 2px solid rgba(79, 78, 78, 0.366);
+                border-radius: 10px;
+                margin-right: 3%;
+                padding-left: 10px;
+            }
+            #error{
+                color: red;
+            }
+                    
+        }
+        .Tiles{
+            
+            margin-top: 2vh;
+            img{
+                height: 7vh;
+            }
+            .card{
+                margin: 1vh 0 1vh 0;
+            }
+        }
+        .AVGChart{
+            margin-top: 3vh;
+            
+           canvas{
+            margin-top: 1vh;
+            height: 30vh;
+        } 
+        }
+        
+    }
+    .Right{
+        height: 100vh;
+        background-image: linear-gradient( 112.6deg,  rgba(56,24,40,1) -10.7%, rgba(23,148,185,1) 100.2% );
+        color: color(primary-l);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+        .Temp{
+            img{
+                height: 15vh;
+            }
+        }
+        .Sunrise{
+            padding: 1vh;
+            margin-top: 2vh;
+            border: 2px solid color(primary-l);
+            border-radius: 10px;
+            img{
+                height: 7vh;
+            }
+        }
+        .Sunset{
+            padding: 1vh;
+            margin-top: 2vh;
+            border: 2px solid color(primary-l);
+            border-radius: 10px;
+            img{
+                height: 7vh;
+            }
+        }
+    }
+
+
+}
+@media (max-width:992px) {
+    #res-Left{
+        display: none;
+    }
+    .Center{
+        .Search{
+            #Dates{
+                display: none;
+            }
+            .LogoBurger{
+                display: block;
+            }
+        }
+    }
+    .Right{
+        margin-top: 3vh;
+    }
+    #center{
+        display: grid;
+        place-items: center;
+        padding: 1vh;
+    }
+    
+}

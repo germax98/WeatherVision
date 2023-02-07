@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="WeatherForecast.css">
+    <link rel="icon" type="image/x-icon" href="../icons/Logo/LogoFavicon.png">
+</head>
+<body>
+<div class="container-fluid" >
+    <div class="row" >
+        <div class="col-md-3 offset-0 no-gutters" id="res-Left">
+            <section class="Left">
+                <section class="Logo">
+                    <div class="container">
+                        
+                        <div class="row">
+                            
+                            <div class="col-md-3 align-self-center">
+                                <img src="../icons/Logo/Logo-Black.svg" alt="">
+                            </div>
+                            
+                            
+                            <div class="col-md-8 align-self-center">
+                                <h3>WeatherVision</h3>
+                            </div>
+                        </div>
+                    </div>    
+                </section>   
+                <section class="Tags">
+                    <div class="row">
+                        <a href="/../index.html"><img src="" alt=""><img src="../icons/nav/Dashboard/view-stacked.svg" alt=""> Dashboard</a>
+                        <a href= "/Pages/WeatherForecast/WeatherForecast.html" id="active_link"> <img src="../icons/nav/Weather Forecast/graph-up.svg" alt=""> Weather Forecast</a>
+                        <a><img src="icons/nav/Weather Forecast/geo-alt.svg" alt=""><img src="../icons/nav/Last Location/geo-alt.svg" alt=""> Last Locations</a>
+                    </div>
+                </section>   
+                <section class="Home">
+                    <div class="row">
+                        <a><img src="icons/nav/About/question-square.svg" alt=""><img src="../icons/nav/About/question-square.svg" alt=""> About This Project</a>
+                        <a><img src="icons/nav/Home/house.svg" alt=""><img src="../icons/nav/Home/house.svg" alt=""> Home</a>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <div class="col-md-9 offset-0 no-gutters" >
+            <section class="Center">
+                <section class="Search">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h1 id="countrynav">Location</h1>
+                            </div>
+                            <div class="col">
+                                <input type="text" id="search" placeholder="Location">
+                                <button id="Submit" onclick="searchCityForecast()">Search</button>
+                                <p id="error"></p>
+                            </div>
+                        </div>
+                    </div>    
+                </section>    
+                <section class="Diagrams">
+                    <div class="container">
+                        <section class="FirstRow">
+                            <div class="row">
+                                <div class="col-md">
+                                    <div class="Overview">
+                                        <div class="card-body">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <h1>Actual</h1>
+                                                    <div class="row">
+                                                    <div class="col">
+                                                        <p>Temperature</p>
+                                                        <p>Wind</p>
+                                                        <p>Hum</p>
+                                                        <p>Pressure</p>
+                                                    </div>
+                                                    <div class="col">
+                                                        <p><span id="temp"></span> °C</p>
+                                                        <p><span id="wind"></span> km/h</p>
+                                                        <p><span id="hum"></span> %</p>
+                                                        <p><span id="pressure"></span>Pa</p>
+                                                    </div>
+                                                    <div class="col">
+                                                        <p id="country">Country</p>
+                                                        <p id="city">city</p>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <p>Lon</p>
+                                                                <p id="lon">lat</p>
+                                                            </div>
+                                                            <div class="col">
+                                                                <p id=>Lat</p>
+                                                                <p id="lat">lat</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <button id="avg" onclick="AverageCharts()">Average</button>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <button id="Actual" onclick="ActualCharts()">Today</button>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="Diagram">
+                                        <div class="card-body">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <h1>Temperature</h1>
+                                                </div>
+                                                <div class="row">
+                                                    <canvas id="Temp"></canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>    
+                    </div>
+                    <div class="container">
+                        <section class="SecondRow">
+                            <div class="row">
+                                <div class="col-md">
+                                    <div class="Diagram">
+                                        <div class="card-body">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <h1>Humidity</h1>
+                                                </div>
+                                                <div class="row">
+                                                    <canvas id="Humi"></canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <div class="Diagram">
+                                        <div class="card-body">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <h1>Windspeed</h1>
+                                                </div>
+                                                <div class="row">
+                                                    <canvas id="Windspeed"></canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>   
+                
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./JSFiles/API.js"></script>
+<script src="./JSFiles/Chart.js"></script>
+<script src="./JSFiles/DisplayDataconst.js"></script>
+</html>

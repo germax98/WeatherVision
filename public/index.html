@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Vision</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="./icons/Logo/LogoFavicon.png">
+</head>
+<body>
+    
+    <div class="container-fluid" >
+        <div class="row" >
+<!--Left Row-->            
+            <div class="col-md-3" id="res-Left">
+                <section class="Left">
+                    <section class="Logo">
+                        <div class="container">
+                            
+                            <div class="row">
+                                
+                                <div class="col-md-3 align-self-center">
+                                    <img src="./icons/Logo/Logo-Black.svg" alt="">
+                                </div>
+                                
+                                
+                                <div class="col-md-8 align-self-center">
+                                    <h3>WeatherVision</h3>
+                                </div>
+                            </div>
+                        </div>    
+                    </section>    
+                    <section class="Tags">
+                        <div class="row">
+                            <a href="/../index.html" id="active_link"><img src="icons/nav/Dashboard/view-stacked.svg" alt=""> Dashboard</a>
+                            <a href= "/Pages/WeatherForecast/WeatherForecast.html" ><img src="icons/nav/Weather Forecast/graph-up.svg" alt=""> Weather Forecast</a>
+                            <a><img src="icons/nav/Last Location/geo-alt.svg" alt=""> Last Locations</a>
+                        </div>
+                    </section>   
+                    <section class="Home">
+                        <div class="row">
+                            <a href="test.html"><img src="icons/nav/About/question-square.svg" alt=""> About This Project</a>
+                            <a><img src="icons/nav/Home/house.svg" alt=""> Home</a>
+                        </div>
+                    </section>
+                </section>
+            </div>
+<!--center Row--> 
+            <div class="col-md-6" >
+                <section class="Center">
+                    <section class="Search">
+                        <div class="container">
+                            
+                            <div class="row">
+                                
+                                <div class="col-md-4" id="Dates">
+                                    <h2 id="date-y-m">---- ----</h2>
+                                    <p  id="date-d-m-y">----, ----, ----</p>
+                                </div>
+                                
+                                
+                                <div class="col-md-8 align-self-center">
+                                    <input type="text" id="myText" placeholder="Location">
+                                    <button id="Submit" onclick="searchCity()">Search</button>
+                                    <p id="error"></p>
+                                </div>
+                            </div>
+                        </div>    
+                    </section> 
+                    <section class="Tiles">
+                        <div class="container">
+                            <section class="FirstRow">
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-4 align-self-center " id="center">
+                                                            <img src="icons/Cards/thermometer-half.svg" alt="">            
+                                                        </div>
+                                                        <div class="col-md-8 text-center" >
+                                                            <p>Temperature</p>
+                                                            <h2 id="actualTemp">---°C</h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-4 align-self-center" id="center">
+                                                            <img src="icons/Cards/wind.svg" alt="">           
+                                                        </div>
+                                                        <div class="col-md-8 text-center" >
+                                                            <p>Wind Speed</p>
+                                                            <h2 id="actualWindspeed">---km/h</h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="SecondRow">
+                                <div class="row">
+                                    <div class="col-md">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-4 align-self-center" id="center">
+                                                            <img src="icons/Cards/water.svg" alt="">            
+                                                        </div>
+                                                        <div class="col-md-8 text-center" >
+                                                            <p>Pressure</p>
+                                                            <h2 id="actualPressure">---hpa</h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-4 align-self-center" id="center">
+                                                            <img src="icons/Cards/moisture.svg" alt=""></img>           
+                                                        </div>
+                                                        <div class="col-md-8 text-center" >
+                                                            <p>Humidity</p>
+                                                            <h2 id="actualHumidity">---%</h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+                    <section class="AVGChart">
+                        <div class="container" id="res-Chard">
+                            <div class="row">
+                                <h3>Average Weekly Temperature</h3>
+                                <div class="chartBox">
+                                    <canvas id="myChart"></canvas>
+                                </div>
+                            </div>    
+                        </div>
+                    </section>
+                </section> 
+            </div>  
+<!--right Row-->
+            <div class="col-md-3" >
+                <section class="Right">
+                    <section class="Location">
+                        <div class="container text-center">
+                            <div class="col">
+                                <h2 id="city">----</h2>
+                                <p id="country">----</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="LatLan">
+                        <div class="container text-center">
+                            <div class="row">                   
+                                <div class="col" >
+                                    <p>Latitude</p>
+                                    <h2 id="lat">--.--</h2>
+                                </div>   
+                                <div class="col" >
+                                    <p>Lontitude</p>
+                                    <h2 id="lon">--.--</h2>
+                                </div>                         
+                            </div>
+                        </div>
+                    </section>
+                    <section class="Temp">
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col-5 align-self-center">
+                                    <img src="" alt="" id="icon">
+                                </div>
+                                <div class="col-7">
+                                        <h1 id="actualTemptwo">--°C</h1>
+                                        <h2 id="actualWeather">----</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="Sunrise-Sunset">
+                        <div class="container text-center">
+                            <div class="row">
+                                <h2>Sunrise & Sunset</h2>
+                            </div>
+                            <section class="Sunrise">
+                                <div class="row ">
+                                    <div class="col-5 align-self-center">
+                                        <img src="icons/Sunrise/brightness-alt-high.svg" alt="">
+                                    </div>
+                                    <div class="col-7">
+                                        <p>Sunrise</p>
+                                        <h2 id="sunrise">--:--AM</h2>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="Sunset">
+                                <div class="row">
+                                    <div class="col-5 align-self-center" id="center">
+                                        <img src="icons/Sunrise/brightness-high.svg" alt="">
+                                    </div>
+                                    <div class="col-7" >
+                                        <p>Sunset</p>
+                                        <h2 id="sunset">--:--PM</h2>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="Index.js"></script>
+<script src="./JS Files/APIData.js"></script>
+<script src="./JS Files/DisplayData.js"></script>
+<script src="./JS Files/Chart.js"></script>
+</html>

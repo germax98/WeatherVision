@@ -1,0 +1,144 @@
+body .Left {
+  height: 100vh;
+  background-color: #EFF2F3;
+}
+body .Left .Logo {
+  height: 18vh;
+}
+body .Left .Logo img {
+  height: 18vh;
+  padding-bottom: 2vh;
+}
+body .Left .Logo h3 {
+  padding-left: 1vw;
+  text-transform: uppercase;
+  font-weight: 200;
+  color: #7E98D2;
+  text-decoration: underline overline;
+  -webkit-text-decoration-color: #7E98D2;
+          text-decoration-color: #7E98D2;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+body .Left .Tags {
+  padding-left: 5vw;
+}
+body .Left .Tags .row {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body .Left .Home {
+  padding-left: 5vw;
+  margin-top: 40vh;
+}
+body .Left .Home .row {
+  height: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body a {
+  text-decoration: none;
+  color: #000000;
+}
+body img {
+  padding-right: 1vw;
+  height: 3vh;
+}
+body #active_link {
+  background-color: white;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  padding-left: 10%;
+  color: #7E98D2;
+  font-size: large;
+}
+body .Center {
+  height: 100vh;
+}
+body .Center .Search {
+  display: flex;
+  align-items: center;
+  height: 15vh;
+  border-bottom: 1px solid #949FAD;
+}
+body .Center .Search #error {
+  color: red;
+}
+body .Center .Search button {
+  min-width: 6vw;
+  min-height: 6vh;
+  background-color: transparent;
+  border: 2px solid rgba(79, 78, 78, 0.366);
+  border-radius: 10px;
+}
+body .Center .Search input {
+  width: 65%;
+  height: 6vh;
+  background-color: transparent;
+  border: 2px solid rgba(79, 78, 78, 0.366);
+  border-radius: 10px;
+  margin-right: 3%;
+  padding-left: 10px;
+}
+body .Center .Search button:hover {
+  color: #000000;
+  background-color: rgba(79, 78, 78, 0.366);
+}
+body .Center .Search input:focus {
+  box-shadow: 5px 5px 10px rgba(79, 78, 78, 0.366);
+}
+body .Center .Diagrams {
+  height: 80vh;
+  margin-top: 3vh;
+}
+body .Center .Diagrams .FirstRow {
+  height: auto;
+}
+body .Center .Diagrams .FirstRow .Overview {
+  height: auto;
+  border-radius: 6px;
+  padding: 2%;
+  background-image: linear-gradient(112.6deg, rgb(56, 24, 40) -10.7%, rgb(23, 148, 185) 100.2%);
+  color: #EFF2F3;
+}
+body .Center .Diagrams .FirstRow .Overview button {
+  width: 100%;
+  height: 6vh;
+  background-color: transparent;
+  border: 2px solid #EFF2F3;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #EFF2F3;
+}
+body .Center .Diagrams .FirstRow .Overview button:hover {
+  background-color: #EFF2F3;
+  color: #000000;
+  border: 2px solid #EFF2F3;
+}
+body .Center .Diagrams .Diagram {
+  height: 100%;
+  border: 2px solid rgba(79, 78, 78, 0.366);
+  border-radius: 6px;
+  padding: 2%;
+}
+body .Center .Diagrams .Diagram canvas {
+  height: 25vh;
+  padding: 2%;
+}
+body .Center .Diagrams .SecondRow {
+  margin-top: 5vh;
+  height: auto;
+}
+
+#test {
+  background-color: #7E98D2;
+}
+
+#testtwo {
+  background-color: aqua;
+}/*# sourceMappingURL=WeatherForecast.css.map */

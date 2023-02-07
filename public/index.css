@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body .Left {
+  height: 100vh;
+  background-color: #EFF2F3;
+}
+body .Left .Logo {
+  height: 18vh;
+}
+body .Left .Logo img {
+  height: 18vh;
+  padding-bottom: 2vh;
+}
+body .Left .Logo h3 {
+  padding-left: 1vw;
+  text-transform: uppercase;
+  font-weight: 200;
+  color: #7E98D2;
+  text-decoration: underline overline;
+  -webkit-text-decoration-color: #7E98D2;
+          text-decoration-color: #7E98D2;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+body .Left .Tags {
+  padding-left: 5vw;
+}
+body .Left .Tags .row {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body .Left .Home {
+  padding-left: 5vw;
+  margin-top: 40vh;
+}
+body .Left .Home .row {
+  height: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body a {
+  text-decoration: none;
+  color: #000000;
+}
+body img {
+  padding-right: 1vw;
+  height: 3vh;
+}
+body #active_link {
+  background-color: white;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  padding-left: 10%;
+  color: #7E98D2;
+  font-size: large;
+}
+body .Center .Search {
+  height: 18vh;
+  border-bottom: 2px solid rgb(192, 187, 187);
+  display: grid;
+  place-items: center;
+}
+body .Center .Search #Submit {
+  min-width: 6vw;
+  min-height: 6vh;
+  background-color: transparent;
+  border: 2px solid rgba(79, 78, 78, 0.366);
+  border-radius: 10px;
+}
+body .Center .Search #myText {
+  width: 65%;
+  height: 6vh;
+  background-color: transparent;
+  border: 2px solid rgba(79, 78, 78, 0.366);
+  border-radius: 10px;
+  margin-right: 3%;
+  padding-left: 10px;
+}
+body .Center .Search #error {
+  color: red;
+}
+body .Center .Tiles {
+  margin-top: 2vh;
+}
+body .Center .Tiles img {
+  height: 7vh;
+}
+body .Center .Tiles .card {
+  margin: 1vh 0 1vh 0;
+}
+body .Center .AVGChart {
+  margin-top: 3vh;
+}
+body .Center .AVGChart canvas {
+  margin-top: 1vh;
+  height: 30vh;
+}
+body .Right {
+  height: 100vh;
+  background-image: linear-gradient(112.6deg, rgb(56, 24, 40) -10.7%, rgb(23, 148, 185) 100.2%);
+  color: #EFF2F3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+body .Right .Temp img {
+  height: 15vh;
+}
+body .Right .Sunrise {
+  padding: 1vh;
+  margin-top: 2vh;
+  border: 2px solid #EFF2F3;
+  border-radius: 10px;
+}
+body .Right .Sunrise img {
+  height: 7vh;
+}
+body .Right .Sunset {
+  padding: 1vh;
+  margin-top: 2vh;
+  border: 2px solid #EFF2F3;
+  border-radius: 10px;
+}
+body .Right .Sunset img {
+  height: 7vh;
+}
+
+@media (max-width: 992px) {
+  #res-Left {
+    display: none;
+  }
+  .Center .Search #Dates {
+    display: none;
+  }
+  .Center .Search .LogoBurger {
+    display: block;
+  }
+  .Right {
+    margin-top: 3vh;
+  }
+  #center {
+    display: grid;
+    place-items: center;
+    padding: 1vh;
+  }
+}/*# sourceMappingURL=index.css.map */

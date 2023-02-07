@@ -1,0 +1,171 @@
+$colors: (
+  primary-d: #000000,
+  primary-l: #EFF2F3,
+  l-dark: #949FAD,
+  p-right:#a6b3c7,
+  link: #7E98D2,
+  
+);
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+  }
+  body{
+   
+    
+    .Left{
+        height: 100vh;
+        background-color: color(primary-l);;
+        
+        .Logo{
+            
+            height: 18vh;
+            
+            img{
+                height: 18vh;
+                padding-bottom: 2vh;
+                
+            }
+            h3{
+                padding-left: 1vw;
+                text-transform: uppercase;
+                font-weight: 200;
+                color: color(link);
+                text-decoration: underline overline;
+                text-decoration-color: color(link);
+                text-underline-offset: 4px;
+                text-decoration-thickness: 1px;
+            }
+            
+        }
+        .Tags{
+            
+            
+            padding-left: 5vw;
+            .row{
+                height: 20vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around; 
+            }
+            
+            
+        }
+        .Home{
+            
+            padding-left: 5vw;
+            .row{
+                height: 8vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around; 
+            }
+            margin-top: 40vh;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: color(primary-d);
+        
+    }
+    img{
+        padding-right: 1vw;
+        height: 3vh;
+    }
+    #active_link{
+            background-color: white;
+            height: 5vh;
+            display: flex;
+            align-items: center;
+            
+            border-radius: 25px;
+            padding-left: 10%;
+            color: color(link);
+            font-size: large;   
+    }
+    .Center{
+        height: 100vh;
+        .Search{
+            display: flex;
+            align-items: center;
+            height: 15vh;
+            border-bottom: 1px solid color(l-dark);
+            #error{
+                color: red;
+            }
+            button{
+                min-width: 6vw;
+                min-height: 6vh;
+                background-color: transparent;
+                border: 2px solid rgba(79, 78, 78, 0.366);
+                border-radius: 10px;
+            }
+            input{
+                width: 65%;
+                height: 6vh;
+                background-color: transparent;
+                border: 2px solid rgba(79, 78, 78, 0.366);
+                border-radius: 10px;
+                margin-right: 3%;
+                padding-left: 10px;
+            }
+            button:hover{
+                color: color(primary-d);
+                background-color: rgba(79, 78, 78, 0.366);
+            }
+            input:focus{
+                box-shadow: 5px 5px 10px rgba(79, 78, 78, 0.366);
+            }
+        }
+        .Diagrams{
+            height: 80vh;
+            margin-top: 3vh;
+            .FirstRow{
+                
+                height: auto;
+                
+                .Overview{
+                    height: auto;
+                    
+                    border-radius: 6px;
+                    padding: 2%;
+                    background-image: linear-gradient( 112.6deg,  rgba(56,24,40,1) -10.7%, rgba(23,148,185,1) 100.2% );
+                    color: color(primary-l);
+                    button{
+                        width: 100%;
+                        height: 6vh;
+                        background-color: transparent;
+                        border: 2px solid color(primary-l);
+                        border-radius: 10px;
+                        font-size: 20px;
+                        color: color(primary-l);
+                        
+                    }
+                    button:hover{
+                        background-color: color(primary-l);
+                        color: color(primary-d);
+                        border: 2px solid color(primary-l);
+                    }
+                   
+                }
+                
+            }
+            .Diagram{
+                    height: 100%;
+                    border: 2px solid rgba(79, 78, 78, 0.366);
+                    border-radius: 6px;
+                    padding: 2%;
+                    canvas{
+                        
+                        height: 25vh;
+                        padding: 2%;
+                    }
+                    
+                }
+            .SecondRow{
+                margin-top: 5vh;
+                height: auto;
+                
+            }
+        }
+    }
+}
