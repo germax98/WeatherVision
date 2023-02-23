@@ -49,7 +49,7 @@ WeatherVision is a Portfolio Project to Cover the following Aspects:
 
 3 General
   - GIT
-  - Docker
+  
   
 4 UI/UX
   - Adobe XD
