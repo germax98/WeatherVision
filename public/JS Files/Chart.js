@@ -3,10 +3,6 @@ function drawChart(date,temp){
     const ctx = document.getElementById('myChart').getContext('2d');
     const height = window.innerHeight
     const gradientcolor = ctx.createLinearGradient(0, 0, 0, height)
-    //x0=startingpoint horizontal
-    //y0=startingpoint vertical
-    //x1 = endingpoint horizontal
-    //y1 = endpoint vertikal
     gradientcolor.addColorStop(0, 'rgba(102,130,208,0.8)')
     gradientcolor.addColorStop(0.3, 'rgba(222,225,229,0.0)')
     Graph = new Chart(ctx, {            //Global
